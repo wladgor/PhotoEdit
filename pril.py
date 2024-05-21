@@ -453,7 +453,7 @@ class Met5(Format, Ui_Form5):
         if self.shrift_flag:
             QMessageBox.question(self, 'Внимание!', 'Внимание! Шрифт будет заменён',
                                  QMessageBox.Ok)
-        self.shrift = str(self.ShriftCombo.currentText())
+        self.shrift = "fonts/" + str(self.ShriftCombo.currentText())
         self.shrift_flag = True
 
     def custom_shrift(self):

@@ -43,9 +43,9 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.label.setText(_translate("Form", "<html><head/><body><p><span style=\" font-size:18pt;\">История дирректорий</span></p></body></html>"))
+        self.label.setText(_translate("Form", "<html><head/><body><p><span style=\" font-size:18pt;\">История директорий</span></p></body></html>"))
         self.Exit.setText(_translate("Form", "Назад"))
-        self.label_2.setText(_translate("Form", "<html><head/><body><p><span style=\" font-size:14pt;\">В 2 графе -  файл который был изменём</span></p><p><span style=\" font-size:14pt;\">В 3 графе - директория в которую он был сохранён</span></p></body></html>"))
+        self.label_2.setText(_translate("Form", "<html><head/><body><p><span style=\" font-size:14pt;\">В 2 графе -  файл который был изменён</span></p><p><span style=\" font-size:14pt;\">В 3 графе - директория в которую он был сохранён</span></p></body></html>"))
         self.dela.setText(_translate("Form", "Удалить выбранный элемент"))
         self.redac.setText(_translate("Form", "Изменить выбранный элемент"))
         self.linetxt.setText(_translate("Form", "Введите новое название элементу:"))
