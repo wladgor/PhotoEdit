@@ -76,6 +76,7 @@ class MainWindows(QMainWindow, Ui_MainWindow):
         self.choice_main_show.closing.connect(self.return_work_after_close)
 
 
+# Окно о программе
 class AboutWindow(QWidget, Ui_Form9):
     closing = pyqtSignal()
 
@@ -100,6 +101,7 @@ class AboutWindow(QWidget, Ui_Form9):
         self.close()
 
 
+# Редактор историй
 class HistoryViever(QWidget, Ui_Form):
     closing = pyqtSignal()
 
@@ -149,8 +151,8 @@ class HistoryViever(QWidget, Ui_Form):
         if selected_index.isValid() and new_value:
             row = selected_index.row()
             col = selected_index.column()
-            id_item = self.model.item(row, 0)  # Первая колонка содержит ID
-            if id_item and col > 0:  # Проверка, что колонка не первая
+            id_item = self.model.item(row, 0)
+            if id_item and col > 0:
                 record_id = int(id_item.text())
 
                 # Обновление в модели
@@ -178,17 +180,16 @@ class HistoryViever(QWidget, Ui_Form):
                 # Удаление из модели
                 self.model.removeRow(row)
 
-
     def close_button(self):
         self.closing.emit()
         self.close()
-
 
     def closeEvent(self, event):
         self.closing.emit()
         self.close()
 
 
+# Просмотр изображений
 class ImageWindow(QWidget):
     def __init__(self, image_path, parent=None):  # image_path обязателен
 
@@ -212,6 +213,7 @@ class ImageWindow(QWidget):
         self.move(QApplication.desktop().screen().rect().center() - self.rect().center())
 
 
+# Меню выбора
 class ChoiceMain(QMainWindow, Ui_ChoiceMain):
     closing = pyqtSignal()
 
@@ -252,6 +254,7 @@ class ChoiceMain(QMainWindow, Ui_ChoiceMain):
         self.setEnabled(True)
 
 
+# Родительский класс
 class Format(QMainWindow):
     closing = pyqtSignal()
 
@@ -323,6 +326,7 @@ class Format(QMainWindow):
         self.close()
 
 
+# Далее методы
 class Met1(Format, Ui_Form1):
     def __init__(self):
         super().__init__()
